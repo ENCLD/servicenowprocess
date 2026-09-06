@@ -12,10 +12,12 @@ declare global {
                     br0: {
                         table: 'sys_script'
                         id: '288c3d6097354894bf55889051205f28'
+                        deleted: true
                     }
                     cs0: {
                         table: 'sys_script_client'
                         id: 'cf69b2ff51384e31a2e5cf45d22a46f3'
+                        deleted: true
                     }
                     package_json: {
                         table: 'sys_module'
@@ -52,6 +54,7 @@ declare global {
                     src_server_script_js: {
                         table: 'sys_module'
                         id: '8d97018cd34e4ff4afde4fe3a3e96786'
+                        deleted: true
                     }
                 }
                 composite: [
