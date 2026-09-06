@@ -58,5 +58,10 @@ export const ResourceAllocationDashboard = Dashboard({
         },
     ],
     permissions: [],
-    visibilities: [],
+    visibilities: [
+        {
+            $id: Now.ID['393730a9fd1a4d82b757863387086dd0'],
+            experience: '08c73d60537101100834ddeeff7b1287',
+        },
+    ],
 })
