@@ -7,11 +7,11 @@ const ENDING_SOON_FILTER =
     'active=true^end_dateRELATIVEGE@day@ago@0^end_dateRELATIVELE@day@ahead@30'
 
 // Widget layout follows the documented dataSources/metrics/groupBy shape for
-// Dashboard widgets (single-score = Simple, vertical-bar = Group). The `field` on
-// non-COUNT metrics and grouping by a date column aren't shown in the SDK's own
-// examples, so double check those two widgets render as expected after install and
-// adjust via the dashboard's "Configure widget" UI if the platform expects
-// different property names.
+// Dashboard widgets (single-score = Simple, vertical-bar = Group). Non-COUNT
+// metrics target a field via `aggregateField` (confirmed against the platform's
+// own validation error -- the SDK's docs only show a COUNT example, which needs
+// no target field at all). Grouping by a date column (the timeline widget) is
+// also unconfirmed by any SDK example, so double check it renders as expected.
 export const ResourceAllocationDashboard = Dashboard({
     $id: Now.ID['ra-dashboard'],
     name: 'Resource Allocation',
@@ -41,7 +41,7 @@ export const ResourceAllocationDashboard = Dashboard({
                             {
                                 dataSource: 'ds_allocation',
                                 id: 'metric_allocation_sum',
-                                field: 'allocation_percentage',
+                                aggregateField: 'allocation_percentage',
                                 aggregateFunction: 'SUM',
                                 axisId: 'primary',
                             },
@@ -78,7 +78,7 @@ export const ResourceAllocationDashboard = Dashboard({
                             {
                                 dataSource: 'ds_active',
                                 id: 'metric_active_companies',
-                                field: 'company',
+                                aggregateField: 'company',
                                 aggregateFunction: 'COUNT_DISTINCT',
                                 axisId: 'primary',
                             },
@@ -106,7 +106,7 @@ export const ResourceAllocationDashboard = Dashboard({
                             {
                                 dataSource: 'ds_resources',
                                 id: 'metric_resources_count',
-                                field: 'consultant',
+                                aggregateField: 'consultant',
                                 aggregateFunction: 'COUNT_DISTINCT',
                                 axisId: 'primary',
                             },
@@ -143,8 +143,11 @@ export const ResourceAllocationDashboard = Dashboard({
                     width: 16,
                     position: { x: 32, y: 16 },
                 },
-                // Timeline: active contracts grouped by end date, so it reads left-to-right
+                // Timeline: active contracts grouped by end month, so it reads left-to-right
                 // as a chronological view of when the firm's current commitments wrap up.
+                // Grouped by the Business-Rule-maintained end_month string column, not the
+                // raw end_date column -- grouping this widget by a Date column directly
+                // rendered "No data available" on this platform version.
                 {
                     $id: Now.ID['ra-widget-timeline'],
                     component: 'vertical-bar',
@@ -158,7 +161,7 @@ export const ResourceAllocationDashboard = Dashboard({
                                 id: 'ds_timeline',
                             },
                         ],
-                        headerTitle: 'Contract Timeline (Ending Dates)',
+                        headerTitle: 'Contract Timeline (Ending by Month)',
                         metrics: [
                             {
                                 dataSource: 'ds_timeline',
@@ -169,7 +172,7 @@ export const ResourceAllocationDashboard = Dashboard({
                         ],
                         groupBy: [
                             {
-                                groupBy: [{ dataSource: 'ds_timeline', groupByField: 'end_date' }],
+                                groupBy: [{ dataSource: 'ds_timeline', groupByField: 'end_month' }],
                                 maxNumberOfGroups: 50,
                                 showOthers: false,
                             },

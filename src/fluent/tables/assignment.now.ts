@@ -1,5 +1,5 @@
 import '@servicenow/sdk/global'
-import { Table, ReferenceColumn, DateColumn, IntegerColumn, BooleanColumn } from '@servicenow/sdk/core'
+import { Table, ReferenceColumn, DateColumn, IntegerColumn, BooleanColumn, StringColumn } from '@servicenow/sdk/core'
 import { raUserRole } from '../workspaces/resource-allocation/roles.now'
 
 // One consultant's placement with one client company for a period of time at a
@@ -42,6 +42,17 @@ export const x_2207143_k_test_assignment = Table({
         active: BooleanColumn({
             label: 'Active',
             default: true,
+        }),
+        // 'yyyy-MM' bucket derived from end_date by a Business Rule (see
+        // business-rules/assignment-end-month.now.ts). The dashboard's timeline
+        // groups by this instead of end_date directly -- grouping a chart widget
+        // by a raw Date column renders "No data available" on this platform
+        // version, while grouping by a plain string field is the documented,
+        // proven-working shape.
+        end_month: StringColumn({
+            label: 'End Month',
+            maxLength: 7,
+            readOnly: true,
         }),
     },
 })

@@ -43,6 +43,10 @@ declare global {
                         table: 'sys_ux_list'
                         id: '235e934b512a4c0f92eee0557a0b5d26'
                     }
+                    'ra-br-end-month': {
+                        table: 'sys_script'
+                        id: '9cae955a94844a34a005aed69c23a7f4'
+                    }
                     'ra-companies': {
                         table: 'sys_ux_list'
                         id: '7809c5a55584471084a9d1eb685eb4ca'
@@ -248,6 +252,10 @@ declare global {
                     'ra-workspace-acl': {
                         table: 'sys_security_acl'
                         id: 'b579552db91b4ab099d18cd492fcf32b'
+                    }
+                    'src_server_business-rules_set-assignment-end-month_ts': {
+                        table: 'sys_module'
+                        id: '074d0950563e42d6b463aa0660544b48'
                     }
                     src_server_script_js: {
                         table: 'sys_module'
@@ -665,6 +673,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_dictionary'
+                        id: 'a51cbf371ef740949a924c38b00f8c3f'
+                        key: {
+                            name: 'x_2207143_k_test_assignment'
+                            element: 'end_month'
+                        }
+                    },
+                    {
                         table: 'sys_ui_list_element'
                         id: 'a63a89e77e334c9bb0e3439b01e876a0'
                         key: {
@@ -794,6 +810,15 @@ declare global {
                         key: {
                             name: 'x_2207143_k_test_assignment'
                             element: 'NULL'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'e61db148c5e544cbb48eb972030ffe4d'
+                        key: {
+                            name: 'x_2207143_k_test_assignment'
+                            element: 'end_month'
                             language: 'en'
                         }
                     },
