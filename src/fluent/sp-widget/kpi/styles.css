@@ -1,0 +1,36 @@
+.ra-kpi-row {
+  margin-bottom: $sp-space-5;
+}
+
+.ra-kpi-tile {
+  background: sp-rgb(--now-color--surface-primary, #FFFFFF);
+  border: 1px solid sp-rgb(--now-color--neutral-3, #D2D5D9);
+  border-radius: 6px;
+  padding: $sp-space-5;
+  text-align: center;
+  margin-bottom: $sp-space-4;
+}
+
+.ra-kpi-tile--warning {
+  border-top: 4px solid sp-rgb(--now-color--warning-1, #E5A428);
+}
+
+.ra-kpi-tile--info {
+  border-top: 4px solid sp-rgb(--now-color--primary-1, #0080A3);
+}
+
+.ra-kpi-tile--success {
+  border-top: 4px solid sp-rgb(--now-color--success-1, #4CAF50);
+}
+
+.ra-kpi-value {
+  font-size: $sp-text-2xl;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.ra-kpi-label {
+  font-size: $sp-text-sm;
+  color: sp-rgb(--now-color--text-secondary, #62676F);
+  margin-top: $sp-space-2;
+}

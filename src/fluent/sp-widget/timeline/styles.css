@@ -1,0 +1,128 @@
+.ra-timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: $sp-space-2;
+}
+
+.ra-timeline-actions {
+  display: flex;
+  gap: $sp-space-2;
+}
+
+.ra-add-form {
+  margin-bottom: $sp-space-4;
+}
+
+.ra-add-form-errors {
+  margin-bottom: $sp-space-3;
+}
+
+.ra-timeline-hint {
+  margin-bottom: $sp-space-4;
+}
+
+.ra-timeline-scroll {
+  overflow-x: auto;
+}
+
+.ra-timeline-inner {
+  box-sizing: content-box;
+}
+
+.ra-timeline-months {
+  position: relative;
+  height: 24px;
+  margin-left: 220px;
+  border-bottom: 1px solid sp-rgb(--now-color--neutral-3, #D2D5D9);
+}
+
+.ra-timeline-month {
+  position: absolute;
+  top: 0;
+  font-size: $sp-text-xs;
+  color: sp-rgb(--now-color--text-secondary, #62676F);
+  white-space: nowrap;
+  border-left: 1px solid sp-rgb(--now-color--neutral-3, #D2D5D9);
+  padding-left: $sp-space-1;
+}
+
+.ra-timeline-row {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  border-bottom: 1px solid sp-rgb(--now-color--neutral-2, #E9EBED);
+}
+
+.ra-timeline-row-label {
+  width: 220px;
+  flex: 0 0 220px;
+  padding-right: $sp-space-3;
+}
+
+.ra-timeline-row-name {
+  font-size: $sp-text-sm;
+  font-weight: 600;
+}
+
+.ra-timeline-row-meta {
+  font-size: $sp-text-xs;
+  color: sp-rgb(--now-color--text-secondary, #62676F);
+}
+
+.ra-timeline-track {
+  position: relative;
+  flex: 1 1 auto;
+  height: 32px;
+  background: sp-rgb(--now-color--neutral-1, #F4F5F7);
+  border-radius: 4px;
+}
+
+.ra-timeline-bar {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  background: sp-rgb(--now-color--primary-1, #0080A3);
+  border-radius: 4px;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: $sp-text-xs;
+  min-width: 18px;
+  user-select: none;
+}
+
+.ra-timeline-bar--dirty {
+  background: sp-rgb(--now-color--warning-1, #E5A428);
+}
+
+.ra-timeline-bar--inactive {
+  opacity: 0.5;
+}
+
+.ra-timeline-bar-text {
+  pointer-events: none;
+}
+
+.ra-timeline-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8px;
+  cursor: ew-resize;
+}
+
+.ra-timeline-handle--left {
+  left: 0;
+}
+
+.ra-timeline-handle--right {
+  right: 0;
+}
+
+.ra-timeline-empty {
+  padding: $sp-space-6 0;
+}

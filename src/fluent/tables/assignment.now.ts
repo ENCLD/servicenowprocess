@@ -1,11 +1,11 @@
 import '@servicenow/sdk/global'
 import { Table, ReferenceColumn, DateColumn, IntegerColumn, BooleanColumn, StringColumn } from '@servicenow/sdk/core'
-import { raUserRole } from '../workspaces/resource-allocation/roles.now'
+import { raPortalUserRole } from '../roles/portal-role.now'
 
 // One consultant's placement with one client company for a period of time at a
-// given allocation percentage. "Total share" for a consultant is not stored here —
-// it's the SUM of allocation_percentage across their active rows, computed on the
-// dashboard's bar chart and in reports rather than duplicated as a column.
+// given allocation percentage. "Total share" for a consultant is not stored here --
+// it's the SUM of allocation_percentage across their active rows, computed server-side
+// (GlideAggregate) in the portal widgets rather than duplicated as a column.
 export const x_2207143_k_test_assignment = Table({
     name: 'x_2207143_k_test_assignment',
     label: 'Resource Assignment',
@@ -14,7 +14,7 @@ export const x_2207143_k_test_assignment = Table({
     allowWebServiceAccess: true,
     audit: true,
     createAccessControls: true,
-    userRole: raUserRole,
+    userRole: raPortalUserRole,
     schema: {
         consultant: ReferenceColumn({
             label: 'Consultant',
@@ -44,11 +44,8 @@ export const x_2207143_k_test_assignment = Table({
             default: true,
         }),
         // 'yyyy-MM' bucket derived from end_date by a Business Rule (see
-        // business-rules/assignment-end-month.now.ts). The dashboard's timeline
-        // groups by this instead of end_date directly -- grouping a chart widget
-        // by a raw Date column renders "No data available" on this platform
-        // version, while grouping by a plain string field is the documented,
-        // proven-working shape.
+        // business-rules/assignment-end-month.now.ts). Kept for reporting/grouping
+        // convenience even though the portal widgets group in-script.
         end_month: StringColumn({
             label: 'End Month',
             maxLength: 7,

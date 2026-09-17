@@ -1,0 +1,36 @@
+.ra-chart-canvas-wrap {
+  position: relative;
+  height: 320px;
+}
+
+.ra-chart-legend {
+  margin-top: $sp-space-4;
+  font-size: $sp-text-sm;
+  color: sp-rgb(--now-color--text-secondary, #62676F);
+}
+
+.ra-legend-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  margin-right: $sp-space-1;
+  margin-left: $sp-space-4;
+}
+
+.ra-legend-swatch:first-child {
+  margin-left: 0;
+}
+
+.ra-legend-swatch--warning {
+  background: #E5A428;
+}
+
+.ra-legend-swatch--info {
+  background: #0080A3;
+}
+
+.ra-chart-alert {
+  margin-top: $sp-space-4;
+  margin-bottom: 0;
+}

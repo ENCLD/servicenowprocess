@@ -1,0 +1,101 @@
+<div class="panel panel-default ra-timeline-widget">
+  <div class="panel-heading ra-timeline-header">
+    <h3 class="panel-title">Contract Timeline</h3>
+    <div class="ra-timeline-actions">
+      <button type="button" class="btn btn-success btn-sm" ng-click="c.toggleAddForm()">
+        <i class="fa fa-plus"></i> Add Assignment
+      </button>
+      <button type="button" class="btn btn-default btn-sm" ng-if="c.hasChanges()" ng-click="c.discardChanges()" ng-disabled="c.saving">
+        Discard
+      </button>
+      <button type="button" class="btn btn-primary btn-sm" ng-click="c.saveChanges()" ng-disabled="!c.hasChanges() || c.saving">
+        <span ng-if="c.saving"><i class="fa fa-spinner fa-spin"></i> Saving…</span>
+        <span ng-if="!c.saving">Save Changes<span ng-if="c.hasChanges()"> ({{c.dirtyCount()}})</span></span>
+      </button>
+    </div>
+  </div>
+  <div class="panel-body">
+
+    <div class="well ra-add-form" ng-if="c.showAddForm">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+          <label for="raNewConsultant">Consultant</label>
+          <select id="raNewConsultant" class="form-control" ng-model="c.newAssignment.consultant"
+                  ng-options="opt.sys_id as opt.label for opt in c.data.consultantOptions">
+            <option value="">-- Select consultant --</option>
+          </select>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 form-group">
+          <label for="raNewCompany">Client Company</label>
+          <select id="raNewCompany" class="form-control" ng-model="c.newAssignment.company"
+                  ng-options="opt.sys_id as opt.label for opt in c.data.companyOptions">
+            <option value="">-- Select company --</option>
+          </select>
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-12 form-group">
+          <label for="raNewStart">Start Date</label>
+          <input type="text" id="raNewStart" class="form-control" placeholder="YYYY-MM-DD" ng-model="c.newAssignment.start_date" />
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-12 form-group">
+          <label for="raNewEnd">End Date</label>
+          <input type="text" id="raNewEnd" class="form-control" placeholder="YYYY-MM-DD" ng-model="c.newAssignment.end_date" />
+        </div>
+        <div class="col-md-2 col-sm-6 col-xs-12 form-group">
+          <label for="raNewAllocation">Allocation %</label>
+          <input type="number" id="raNewAllocation" class="form-control" min="1" max="100" ng-model="c.newAssignment.allocation_percentage" />
+        </div>
+      </div>
+      <div class="alert alert-danger ra-add-form-errors" ng-if="c.createErrors.length">
+        <ul class="list-unstyled m-b-none">
+          <li ng-repeat="err in c.createErrors track by $index">{{err}}</li>
+        </ul>
+      </div>
+      <button type="button" class="btn btn-primary btn-sm" ng-click="c.submitNewAssignment()" ng-disabled="c.creating">
+        <span ng-if="c.creating"><i class="fa fa-spinner fa-spin"></i> Adding…</span>
+        <span ng-if="!c.creating">Add to Timeline</span>
+      </button>
+      <button type="button" class="btn btn-default btn-sm" ng-click="c.toggleAddForm()" ng-disabled="c.creating">Cancel</button>
+    </div>
+
+    <div class="alert" ng-if="c.message" ng-class="{'alert-success': c.messageType === 'success', 'alert-danger': c.messageType === 'danger'}">
+      {{c.message}}
+    </div>
+    <p class="ra-timeline-hint text-muted" ng-if="!c.message">
+      Drag a bar to move it, or drag its edges to resize the contract. Click <strong>Save Changes</strong> to apply — this also refreshes the overview chart and KPI tiles above.
+    </p>
+
+    <div class="ra-timeline-scroll" ng-if="c.bars.length">
+     <div class="ra-timeline-inner" ng-style="{width: c.timelineWidthPx + 'px'}">
+      <div class="ra-timeline-months">
+        <span class="ra-timeline-month" ng-repeat="m in c.monthMarkers track by $index" ng-style="{left: m.leftPct + '%'}">{{m.label}}</span>
+      </div>
+      <div class="ra-timeline-rows">
+        <div class="ra-timeline-row" ng-repeat="bar in c.bars track by bar.sys_id">
+          <div class="ra-timeline-row-label">
+            <div class="ra-timeline-row-name">{{bar.consultant}}</div>
+            <div class="ra-timeline-row-meta">{{bar.consultantTitle}} · {{bar.company}}</div>
+          </div>
+          <div class="ra-timeline-track">
+            <div class="ra-timeline-bar"
+                 ng-class="{'ra-timeline-bar--dirty': bar.dirty, 'ra-timeline-bar--inactive': !bar.active}"
+                 ng-style="{left: bar.leftPct + '%', width: bar.widthPct + '%'}"
+                 ng-mousedown="c.startDrag($event, bar, 'move')">
+              <span class="ra-timeline-handle ra-timeline-handle--left"
+                    ng-mousedown="$event.stopPropagation(); c.startDrag($event, bar, 'resize-start')"></span>
+              <span class="ra-timeline-bar-text">{{bar.allocation}}%</span>
+              <span class="ra-timeline-handle ra-timeline-handle--right"
+                    ng-mousedown="$event.stopPropagation(); c.startDrag($event, bar, 'resize-end')"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
+
+    <div class="text-center text-muted ra-timeline-empty" ng-if="!c.bars.length">
+      <i class="fa fa-calendar fa-2x"></i>
+      <p>No assignments to display.</p>
+    </div>
+
+  </div>
+</div>
