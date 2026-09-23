@@ -5,891 +5,488 @@ declare global {
         namespace Internal {
             interface Keys extends KeysRegistry {
                 explicit: {
+                    'allokering-01': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '5b809b12a77544aa847e6761cad8f176'
+                    }
+                    'allokering-02': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '24f049005326461481569a91c60570ea'
+                    }
+                    'allokering-03': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '91b5152651674ed7861b97f09962dfd9'
+                    }
+                    'allokering-04': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '6e66d9362ab140dca4f6b7a662f103d2'
+                    }
+                    'allokering-05': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: 'fad7267581ef48f8b38ed865afbf3914'
+                    }
+                    'allokering-06': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: 'b20d72e29b1a4471808b7903d0546015'
+                    }
+                    'allokering-07': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '30ea3bff208a461e81dfe5a00ea26d9c'
+                    }
+                    'allokering-08': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: 'f290ab4efab14060bd1fd58787850fe3'
+                    }
+                    'allokering-09': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '269f79be86984849b3e96334ed90dc54'
+                    }
+                    'allokering-10': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '767d24c2189b45d3b30e26e8b1937439'
+                    }
+                    'allokering-11': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '38502d534cf64a59a4fd3498b6dc3538'
+                    }
+                    'allokering-12': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: 'e831ad3d6896420f82824cc979c02a63'
+                    }
+                    'allokering-13': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '5873628491f743b897cd64e4507729a8'
+                    }
+                    'allokering-14': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '2067ce19ff8343e6b6b934fc98288764'
+                    }
+                    'allokering-15': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: '2310e48cb5ea435aaa3dd01f96fe8d06'
+                    }
+                    'allokering-16': {
+                        table: 'x_kpmg_ra_b1_allokering'
+                        id: 'e8e833e4d3e94ddf9b80ddb75ad67aa9'
+                    }
+                    'api-ra': {
+                        table: 'sys_ws_definition'
+                        id: 'a94d719bfa904a1985d4ec9870b4b3d9'
+                    }
+                    'api-ra-oversikt': {
+                        table: 'sys_ws_operation'
+                        id: 'ab17088b19fa40d996fa85bb9488dfa3'
+                    }
                     bom_json: {
                         table: 'sys_module'
-                        id: '222e4792e5a14bbab3f1f6712a2b84c2'
+                        id: '05c12268dc8940a4ab58c9d7503011c3'
                     }
-                    br0: {
+                    'br-valider-allokering': {
                         table: 'sys_script'
-                        id: '288c3d6097354894bf55889051205f28'
-                        deleted: true
+                        id: '715fe4c3a8c441cca92dd71960344fa6'
                     }
-                    cs0: {
-                        table: 'sys_script_client'
-                        id: 'cf69b2ff51384e31a2e5cf45d22a46f3'
-                        deleted: true
+                    'br-varsle-overallokering': {
+                        table: 'sys_script'
+                        id: 'd24b929b111e41e9a1186ffd472d011d'
+                    }
+                    'konsulent-ahmed': {
+                        table: 'x_kpmg_ra_b1_konsulent'
+                        id: '2c3d377f776042e09ca766120e85396e'
+                    }
+                    'konsulent-erik': {
+                        table: 'x_kpmg_ra_b1_konsulent'
+                        id: 'b2699734b33047bd9ca44f8664e752f9'
+                    }
+                    'konsulent-ingrid': {
+                        table: 'x_kpmg_ra_b1_konsulent'
+                        id: 'a3a3afde1315475190eb321d25d30d71'
+                    }
+                    'konsulent-jonas': {
+                        table: 'x_kpmg_ra_b1_konsulent'
+                        id: '7693a4b720c646c9bc9163a6371adbc5'
+                    }
+                    'konsulent-lina': {
+                        table: 'x_kpmg_ra_b1_konsulent'
+                        id: 'c75ef1d33f3b4cbea3539ac6c2f70553'
+                    }
+                    'konsulent-maria': {
+                        table: 'x_kpmg_ra_b1_konsulent'
+                        id: 'd7efcc4bc9b74c75865edc72b64f75a4'
+                    }
+                    'konsulent-sofie': {
+                        table: 'x_kpmg_ra_b1_konsulent'
+                        id: '47c74389c1ac4a639e3c67b5c22e4ce9'
+                    }
+                    'konsulent-thomas': {
+                        table: 'x_kpmg_ra_b1_konsulent'
+                        id: '3c6526783249421596075a408e6d7a7f'
+                    }
+                    'kunde-fjordbank': {
+                        table: 'x_kpmg_ra_b1_kunde'
+                        id: '10a2ccb5201a4c5da4f9eacdd9a0f41a'
+                    }
+                    'kunde-havbruk': {
+                        table: 'x_kpmg_ra_b1_kunde'
+                        id: 'a9273c1be2ce44d58bf05a525067739d'
+                    }
+                    'kunde-nordlys': {
+                        table: 'x_kpmg_ra_b1_kunde'
+                        id: '816a5ae496754361bba13c789e2c2b84'
+                    }
+                    'kunde-tindra': {
+                        table: 'x_kpmg_ra_b1_kunde'
+                        id: '885a8c9f820c42b6ba5ba182dc2515e0'
+                    }
+                    'meny-ressurs': {
+                        table: 'sys_app_application'
+                        id: '4024dffa7d284604a809cc350f35d29d'
+                    }
+                    'modul-allokeringer': {
+                        table: 'sys_app_module'
+                        id: 'aef9a6677874422c9d0b107290a2e383'
+                    }
+                    'modul-konsulenter': {
+                        table: 'sys_app_module'
+                        id: 'c6414adcdf364e8c8bc514bee631daf2'
+                    }
+                    'modul-kunder': {
+                        table: 'sys_app_module'
+                        id: 'ff4f394aab3d42cc9f5838cba9b33ea6'
+                    }
+                    'modul-ny-allokering': {
+                        table: 'sys_app_module'
+                        id: 'a64ee1b715a9482daffff27ca8a155bf'
+                    }
+                    'modul-oversikt': {
+                        table: 'sys_app_module'
+                        id: '94e879e3145f40f68d294d8701e6c378'
+                    }
+                    'modul-skille-data': {
+                        table: 'sys_app_module'
+                        id: 'b35d53f0233f49cf90de0f77a538c20d'
                     }
                     package_json: {
                         table: 'sys_module'
-                        id: 'd9db9f0e7a3048d4986011a46493be92'
+                        id: '587bb7b246e442879a592323ade901e4'
                     }
-                    'ra-applicability': {
-                        table: 'sys_ux_applicability'
-                        id: 'c99aecbff0e8495dbe10a39199f49aa8'
-                    }
-                    'ra-assignments-active': {
-                        table: 'sys_ux_list'
-                        id: '1cbcde37d45643e193747bd437295287'
-                    }
-                    'ra-assignments-all': {
-                        table: 'sys_ux_list'
-                        id: '7271a05fef064aa28305d038128bba18'
-                    }
-                    'ra-assignments-category': {
-                        table: 'sys_ux_list_category'
-                        id: '1bd32b51e6194e62a47c0e49ceda20d6'
-                    }
-                    'ra-assignments-ending-soon': {
-                        table: 'sys_ux_list'
-                        id: '235e934b512a4c0f92eee0557a0b5d26'
-                    }
-                    'ra-br-end-month': {
-                        table: 'sys_script'
-                        id: '9cae955a94844a34a005aed69c23a7f4'
-                    }
-                    'ra-companies': {
-                        table: 'sys_ux_list'
-                        id: '7809c5a55584471084a9d1eb685eb4ca'
-                    }
-                    'ra-consultants': {
-                        table: 'sys_ux_list'
-                        id: 'a1e85244e774474e95ba4ccd93c37806'
-                    }
-                    'ra-dashboard': {
-                        table: 'par_dashboard'
-                        id: 'e8eef88e83e94c78a58ddcc493d1f17d'
-                    }
-                    'ra-dashboard-overview-tab': {
-                        table: 'par_dashboard_tab'
-                        id: '283126c37d664a33952554ca6ab382c9'
-                    }
-                    'ra-demo-assignment-1': {
-                        table: 'x_2207143_k_test_assignment'
-                        id: '736b3b6d816542a1b3205a583a40e342'
-                    }
-                    'ra-demo-assignment-2': {
-                        table: 'x_2207143_k_test_assignment'
-                        id: 'cae1cd5effb746d78ef60106fec72955'
-                    }
-                    'ra-demo-assignment-3': {
-                        table: 'x_2207143_k_test_assignment'
-                        id: 'ce20925e263748d990e3a5504114186e'
-                    }
-                    'ra-demo-assignment-4': {
-                        table: 'x_2207143_k_test_assignment'
-                        id: '7f4ee3cc61fd4574bfe77524f284b49c'
-                    }
-                    'ra-demo-assignment-5': {
-                        table: 'x_2207143_k_test_assignment'
-                        id: 'ecd957b7b3e74f3d98b3c1869033f527'
-                    }
-                    'ra-demo-assignment-6': {
-                        table: 'x_2207143_k_test_assignment'
-                        id: '82619dccd90b454d866d0f503c3d17d9'
-                    }
-                    'ra-demo-assignment-7': {
-                        table: 'x_2207143_k_test_assignment'
-                        id: 'b16c8c642c1140b78e5da77aa1b06dc3'
-                    }
-                    'ra-demo-company-acme': {
-                        table: 'core_company'
-                        id: '978dd3c054174c37b5884e74826c52f5'
-                    }
-                    'ra-demo-company-globex': {
-                        table: 'core_company'
-                        id: 'e03cd9a4f0254b7fbe09cd8c8192c8d3'
-                    }
-                    'ra-demo-company-northwind': {
-                        table: 'core_company'
-                        id: '5aa5ab27a78d4c6cbc81fac9bdc4fa38'
-                    }
-                    'ra-demo-consultant-emily': {
-                        table: 'sys_user'
-                        id: 'f921d88be89f40eabf7ab76af2371416'
-                    }
-                    'ra-demo-consultant-jonas': {
-                        table: 'sys_user'
-                        id: '94aee0a4f3d1480197244c45bfc57534'
-                    }
-                    'ra-demo-consultant-maria': {
-                        table: 'sys_user'
-                        id: '32d42d0351f149e09e75ea1146791dc1'
-                    }
-                    'ra-demo-consultant-noah': {
-                        table: 'sys_user'
-                        id: 'b6b1709c905a4eb4916c02ca0a0b5125'
-                    }
-                    'ra-directory-category': {
-                        table: 'sys_ux_list_category'
-                        id: '3f29e8f879104fbe869d5fbd575d39d7'
-                    }
-                    'ra-list-config': {
-                        table: 'sys_ux_list_menu_config'
-                        id: 'c30648743e8b4ce5929bc867936b012e'
-                    }
-                    'ra-widget-active-count': {
-                        table: 'par_dashboard_widget'
-                        id: 'ac046c31e7814c4db42137fc52f0a1c9'
-                    }
-                    'ra-widget-allocation-by-consultant': {
-                        table: 'par_dashboard_widget'
-                        id: '7681b2ef15c5479296ec54dbd0074d2f'
-                    }
-                    'ra-widget-avg-allocation': {
-                        table: 'par_dashboard_widget'
-                        id: '496fc9744fcb4d81bace71495a333c57'
-                        deleted: true
-                    }
-                    'ra-widget-ending-soon-count': {
-                        table: 'par_dashboard_widget'
-                        id: '955d330954344d478a4e2c79257ee098'
-                    }
-                    'ra-widget-resources-count': {
-                        table: 'par_dashboard_widget'
-                        id: 'e7dc6e53e55f45248d86d72bd4f75fe5'
-                    }
-                    'ra-widget-timeline': {
-                        table: 'par_dashboard_widget'
-                        id: '6c0e513cac864ab3b0a6bd66dd31f688'
-                    }
-                    'ra-widget-upcoming-end-dates': {
-                        table: 'par_dashboard_widget'
-                        id: '376b9b028e52474783ba7c3bdfe26de0'
-                        deleted: true
-                    }
-                    'ra-workspace': {
-                        table: 'sys_ux_page_registry'
-                        id: 'a2109b0a68144f0aa233f4964a398af3'
-                    }
-                    'ra-workspace_sys_ux_app_config_workspace': {
-                        table: 'sys_ux_app_config'
-                        id: '1000a9d9a3224948a1f43b032c5f8b98'
-                    }
-                    'ra-workspace_sys_ux_app_route_home': {
-                        table: 'sys_ux_app_route'
-                        id: 'c55e26f39fa24702aacb8298d6001e41'
-                    }
-                    'ra-workspace_sys_ux_app_route_list': {
-                        table: 'sys_ux_app_route'
-                        id: '3e8af7e780a04a79be06ee134c80e33e'
-                    }
-                    'ra-workspace_sys_ux_app_route_record': {
-                        table: 'sys_ux_app_route'
-                        id: '7c8525ffc33a4ba6a557ede04c66bf41'
-                    }
-                    'ra-workspace_sys_ux_app_route_simple-list': {
-                        table: 'sys_ux_app_route'
-                        id: '9ee8cdaee7ea4d99b0512d81cf7e7771'
-                    }
-                    'ra-workspace_sys_ux_macroponent_record': {
-                        table: 'sys_ux_macroponent'
-                        id: 'f16a6b2a110d4eca926aad666e8e9631'
-                    }
-                    'ra-workspace_sys_ux_page_property_chrome_footer': {
-                        table: 'sys_ux_page_property'
-                        id: '61e8b14759154315825be7800a1145d9'
-                    }
-                    'ra-workspace_sys_ux_page_property_chrome_header': {
-                        table: 'sys_ux_page_property'
-                        id: 'dd5e984f5e0a480aad593891ced48ef7'
-                    }
-                    'ra-workspace_sys_ux_page_property_chrome_tab': {
-                        table: 'sys_ux_page_property'
-                        id: '05d1a083853a4af881aa611cfe387647'
-                    }
-                    'ra-workspace_sys_ux_page_property_chrome_toolbar': {
-                        table: 'sys_ux_page_property'
-                        id: '5439a8b6b7154dee88b007ace1c16040'
-                    }
-                    'ra-workspace_sys_ux_page_property_listConfigId': {
-                        table: 'sys_ux_page_property'
-                        id: '1530f3c51d5f436d953dc697af5a7b86'
-                    }
-                    'ra-workspace_sys_ux_page_property_view': {
-                        table: 'sys_ux_page_property'
-                        id: '6f90b6c32eaa4fea9ac8676c3cc91bc6'
-                    }
-                    'ra-workspace_sys_ux_page_property_wbApplicabilityConfigId': {
-                        table: 'sys_ux_page_property'
-                        id: 'cc349910363f4904bf199313f3533d04'
-                    }
-                    'ra-workspace_sys_ux_registry_m2m_category_unifiedNav': {
-                        table: 'sys_ux_registry_m2m_category'
-                        id: 'f79583f706ab48259e2ccc1a08ae1ef3'
-                    }
-                    'ra-workspace_sys_ux_screen_home': {
-                        table: 'sys_ux_screen'
-                        id: '702af317de604c84850ce0c108143732'
-                    }
-                    'ra-workspace_sys_ux_screen_list': {
-                        table: 'sys_ux_screen'
-                        id: '3e42d3f72d634133af80e5f08d894d46'
-                    }
-                    'ra-workspace_sys_ux_screen_record': {
-                        table: 'sys_ux_screen'
-                        id: '9d647ebb5cf34d46bc1973a7b33b5583'
-                    }
-                    'ra-workspace_sys_ux_screen_simple-list': {
-                        table: 'sys_ux_screen'
-                        id: 'b7113c9e86dd498b9eb6dc3e6ec67362'
-                    }
-                    'ra-workspace_sys_ux_screen_type_home': {
-                        table: 'sys_ux_screen_type'
-                        id: '5b1b761d259944d8960c07da87547926'
-                    }
-                    'ra-workspace_sys_ux_screen_type_list': {
-                        table: 'sys_ux_screen_type'
-                        id: '8ddd653605b0407b8b7a83b3d47f56c6'
-                    }
-                    'ra-workspace_sys_ux_screen_type_record': {
-                        table: 'sys_ux_screen_type'
-                        id: '75863c905cb2457a8fca8d6cf4911143'
-                    }
-                    'ra-workspace_sys_ux_screen_type_simple-list': {
-                        table: 'sys_ux_screen_type'
-                        id: '584d5583af834ecd93f0690d11a78ee0'
-                    }
-                    'ra-workspace-acl': {
-                        table: 'sys_security_acl'
-                        id: 'b579552db91b4ab099d18cd492fcf32b'
-                    }
-                    'src_server_business-rules_set-assignment-end-month_ts': {
+                    'src_server_allokering-regler_ts': {
                         table: 'sys_module'
-                        id: '074d0950563e42d6b463aa0660544b48'
+                        id: '08fb2079db5245b4b41e3a3d1fbd23b8'
                     }
-                    src_server_script_js: {
+                    src_server_data_ts: {
                         table: 'sys_module'
-                        id: '8d97018cd34e4ff4afde4fe3a3e96786'
-                        deleted: true
+                        id: '9a183c7474b24d9484f08bb595c3bd29'
+                    }
+                    'src_server_oversikt-api_ts': {
+                        table: 'sys_module'
+                        id: '3292843f13af4808b779cd6efd4e03af'
+                    }
+                    'src_server_oversikt-modell_ts': {
+                        table: 'sys_module'
+                        id: '1ee01684cfe1400d9c4ce703cfe1b237'
+                    }
+                    src_server_regler_ts: {
+                        table: 'sys_module'
+                        id: '941db9ea64744dda9dab450ef24a64ee'
                     }
                 }
                 composite: [
                     {
-                        table: 'par_dashboard_visibility'
-                        id: '088409ee529c45abad14b297df83e68a'
+                        table: 'sys_ux_lib_asset'
+                        id: '0a3454cb76f34c4bad308078d5e1636c'
                         key: {
-                            dashboard: 'e8eef88e83e94c78a58ddcc493d1f17d'
-                            experience: 'a2109b0a68144f0aa233f4964a398af3'
+                            name: 'x_kpmg_ra_b1/main'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '0f34e99786854e0eae7a34b108b5adbc'
+                        key: {
+                            name: 'x_kpmg_ra_b1_konsulent'
+                            element: 'aktiv'
+                            language: 'en'
                         }
                     },
                     {
                         table: 'sys_dictionary'
-                        id: '0b21d4fdfbc4435e93c8ad0df4492017'
+                        id: '10a0106a8f184ddfa36f17faa962e758'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'allocation_percentage'
+                            name: 'x_kpmg_ra_b1_konsulent'
+                            element: 'NULL'
                         }
                     },
                     {
-                        table: 'sys_dictionary'
-                        id: '0ee7b0b736864cb0a8c5d9cf92012eb1'
+                        table: 'sn_glider_source_artifact'
+                        id: '11250498e5364590bc7a42bea400890c'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'end_date'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_element'
-                        id: '1ea19f6d524e4da08af5564b05dacf87'
-                        key: {
-                            sys_ui_section: {
-                                id: '3d3767bdc5c347b9a0986fa085243de5'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    caption: 'Assignment Details'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                            element: 'active'
-                            position: '3'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_form'
-                        id: '33f876fe1b2d4aa4bafd51e342d38d0c'
-                        key: {
-                            name: 'x_2207143_k_test_assignment'
-                            view: {
-                                id: 'Default view'
-                                key: {
-                                    name: 'NULL'
-                                }
-                            }
-                            sys_domain: 'global'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_element'
-                        id: '3588984351a7434b88862558a9158dc6'
-                        key: {
-                            sys_ui_section: {
-                                id: '3d3767bdc5c347b9a0986fa085243de5'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    caption: 'Assignment Details'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                            element: 'company'
-                            position: '2'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_element'
-                        id: '371588f38d344366a93041c14af0ff59'
-                        key: {
-                            sys_ui_section: {
-                                id: '3d3767bdc5c347b9a0986fa085243de5'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    caption: 'Assignment Details'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                            element: 'start_date'
-                            position: '5'
-                        }
-                    },
-                    {
-                        table: 'par_dashboard_visibility'
-                        id: '393730a9fd1a4d82b757863387086dd0'
-                        deleted: true
-                        key: {
-                            dashboard: 'e8eef88e83e94c78a58ddcc493d1f17d'
-                            experience: '08c73d60537101100834ddeeff7b1287'
+                            name: 'x_kpmg_ra_b1_ressurs.do - BYOUI Files'
                         }
                     },
                     {
                         table: 'ua_table_licensing_config'
-                        id: '39667d93e98146e8bbf6dac06961f362'
+                        id: '12bcefb2b6564355a0ea3c728ad002c1'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
+                            name: 'x_kpmg_ra_b1_kunde'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '1673fb82b4b0454abe4e4df3d2c52d8a'
+                        key: {
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'til_dato'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '1c626b9e8ec343a6ad47d2f7d5278e62'
+                        key: {
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'kunde'
                         }
                     },
                     {
                         table: 'sys_documentation'
-                        id: '3b77207ee7344dfcb8ba26548267d004'
+                        id: '2d7f205ea06e48d588141e8bef494068'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'consultant'
-                            language: 'en'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_section'
-                        id: '3d3767bdc5c347b9a0986fa085243de5'
-                        key: {
-                            name: 'x_2207143_k_test_assignment'
-                            caption: 'Assignment Details'
-                            view: {
-                                id: 'Default view'
-                                key: {
-                                    name: 'NULL'
-                                }
-                            }
-                            sys_domain: 'global'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_list'
-                        id: '3e27212122f84807a55063286b3c1255'
-                        key: {
-                            name: 'x_2207143_k_test_assignment'
-                            view: {
-                                id: 'Default view'
-                                key: {
-                                    name: 'NULL'
-                                }
-                            }
-                            sys_domain: 'global'
+                            name: 'x_kpmg_ra_b1_kunde'
                             element: 'NULL'
-                            relationship: 'NULL'
-                            parent: 'NULL'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_element'
-                        id: '45ec441ed73f4f338cf3bdc8bfbd5878'
-                        key: {
-                            sys_ui_section: {
-                                id: '3d3767bdc5c347b9a0986fa085243de5'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    caption: 'Assignment Details'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                            element: '.split'
-                            position: '4'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
-                        id: '46d86b4bc3dc4930a02228f3eef3de7d'
-                        key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'company'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_element'
-                        id: '4c4970a1a16946b685daeee47b96ebf8'
-                        key: {
-                            sys_ui_section: {
-                                id: '3d3767bdc5c347b9a0986fa085243de5'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    caption: 'Assignment Details'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                            element: 'consultant'
-                            position: '1'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_list_element'
-                        id: '4fae6db225b84fb3a84400a4aa6e1a19'
-                        key: {
-                            list_id: {
-                                id: '3e27212122f84807a55063286b3c1255'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                    element: 'NULL'
-                                    relationship: 'NULL'
-                                    parent: 'NULL'
-                                }
-                            }
-                            element: 'active'
-                        }
-                    },
-                    {
-                        table: 'sys_user_role'
-                        id: '56fbb21c296b4051805c0ece35410628'
-                        key: {
-                            name: 'x_2207143_k_test.user'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_element'
-                        id: '76fe72a778e24d6ba80d47cb7c605266'
-                        key: {
-                            sys_ui_section: {
-                                id: '3d3767bdc5c347b9a0986fa085243de5'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    caption: 'Assignment Details'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                            element: '.end_split'
-                            position: '8'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_form_section'
-                        id: '83eed0d79eff499db0a30df51836cafd'
-                        key: {
-                            sys_ui_form: {
-                                id: '33f876fe1b2d4aa4bafd51e342d38d0c'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                            sys_ui_section: {
-                                id: '3d3767bdc5c347b9a0986fa085243de5'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    caption: 'Assignment Details'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                        }
-                    },
-                    {
-                        table: 'sys_ui_list_element'
-                        id: '84e9014a6b8c42d5b8a3e00e0712ca36'
-                        key: {
-                            list_id: {
-                                id: '3e27212122f84807a55063286b3c1255'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                    element: 'NULL'
-                                    relationship: 'NULL'
-                                    parent: 'NULL'
-                                }
-                            }
-                            element: 'allocation_percentage'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
-                        id: '8554eb4725574628bb1604ad56653e86'
-                        key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'start_date'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
-                        id: '86873b633b2440618d8dab6301e037f9'
-                        key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'allocation_percentage'
                             language: 'en'
                         }
                     },
                     {
                         table: 'sys_documentation'
-                        id: '8a91845d1c514e6396344986426c3cc9'
+                        id: '2eedee1bf5aa4dd891373c171ceffdfc'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'end_date'
+                            name: 'x_kpmg_ra_b1_konsulent'
+                            element: 'navn'
                             language: 'en'
                         }
                     },
                     {
-                        table: 'sys_security_acl_role'
-                        id: '8b20abf6ed2f4ed99aacf29304ab319c'
-                        key: {
-                            sys_security_acl: 'b579552db91b4ab099d18cd492fcf32b'
-                            sys_user_role: {
-                                id: '56fbb21c296b4051805c0ece35410628'
-                                key: {
-                                    name: 'x_2207143_k_test.user'
-                                }
-                            }
-                        }
-                    },
-                    {
-                        table: 'sys_ui_element'
-                        id: '8d7563b7221d45849bdda22ba93b7417'
-                        key: {
-                            sys_ui_section: {
-                                id: '3d3767bdc5c347b9a0986fa085243de5'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    caption: 'Assignment Details'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                            element: '.begin_split'
-                            position: '0'
-                        }
-                    },
-                    {
-                        table: 'sys_user_role_contains'
-                        id: '927b4b140b464ceba566d48aecf661ea'
-                        key: {
-                            role: {
-                                id: '56fbb21c296b4051805c0ece35410628'
-                                key: {
-                                    name: 'x_2207143_k_test.user'
-                                }
-                            }
-                            contains: {
-                                id: 'f5e15aee00f34fc5a10bb51c934fa189'
-                                key: {
-                                    name: 'canvas_user'
-                                }
-                            }
-                        }
-                    },
-                    {
                         table: 'sys_dictionary'
-                        id: '9b15e5a5afea4f889ed26bba583e7b4d'
+                        id: '348f9505de0d4e27af6426e94da9cb86'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'consultant'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
-                        id: 'a51cbf371ef740949a924c38b00f8c3f'
-                        key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'end_month'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_list_element'
-                        id: 'a63a89e77e334c9bb0e3439b01e876a0'
-                        key: {
-                            list_id: {
-                                id: '3e27212122f84807a55063286b3c1255'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                    element: 'NULL'
-                                    relationship: 'NULL'
-                                    parent: 'NULL'
-                                }
-                            }
-                            element: 'consultant'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_list_element'
-                        id: 'ac4660262aa74925b2057fe30068feba'
-                        key: {
-                            list_id: {
-                                id: '3e27212122f84807a55063286b3c1255'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                    element: 'NULL'
-                                    relationship: 'NULL'
-                                    parent: 'NULL'
-                                }
-                            }
-                            element: 'start_date'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
-                        id: 'adc594196a724c87bbc4adf9d3ae5963'
-                        key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'company'
-                            language: 'en'
-                        }
-                    },
-                    {
-                        table: 'par_dashboard_canvas'
-                        id: 'b24a028ff98e4c60ae8ff2429a552d30'
-                        key: {
-                            dashboard: 'e8eef88e83e94c78a58ddcc493d1f17d'
-                            dashboard_tab: '283126c37d664a33952554ca6ab382c9'
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'konsulent'
                         }
                     },
                     {
                         table: 'sys_db_object'
-                        id: 'baf9aa3531d745d382595fe4058f0bad'
+                        id: '35434f356d104da0a80fb7b5681f661f'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
+                            name: 'x_kpmg_ra_b1_konsulent'
                         }
                     },
                     {
                         table: 'sys_documentation'
-                        id: 'c2c8bc7e7474477ea94dc0f262775e73'
+                        id: '472d7ec54c2f42e4acfe79d41ccdad72'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'active'
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'konsulent'
                             language: 'en'
                         }
                     },
                     {
-                        table: 'sys_ui_list_element'
-                        id: 'd4a60ac0c34445429ac4b9fad2a42863'
+                        table: 'sys_dictionary'
+                        id: '4b057d1751e442218561b675c48842a5'
                         key: {
-                            list_id: {
-                                id: '3e27212122f84807a55063286b3c1255'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                    element: 'NULL'
-                                    relationship: 'NULL'
-                                    parent: 'NULL'
-                                }
-                            }
-                            element: 'company'
-                        }
-                    },
-                    {
-                        table: 'sys_ui_element'
-                        id: 'd741ea7c45a24874bdac20cac9322776'
-                        key: {
-                            sys_ui_section: {
-                                id: '3d3767bdc5c347b9a0986fa085243de5'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    caption: 'Assignment Details'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                            element: 'end_date'
-                            position: '6'
+                            name: 'x_kpmg_ra_b1_konsulent'
+                            element: 'navn'
                         }
                     },
                     {
                         table: 'sys_documentation'
-                        id: 'dcd8b738b18d457bb250b3125dd7d8e1'
+                        id: '4b67dafb20824af59b234345e996016e'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'kunde'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: '4ba793240e0440ada83ce0ed0acc2ef1'
+                        key: {
+                            name: 'x_kpmg_ra_b1_allokering'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_page'
+                        id: '4bf070ea6f8a4e88a5633a64150c3f09'
+                        key: {
+                            endpoint: 'x_kpmg_ra_b1_ressurs.do'
+                        }
+                    },
+                    {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: '514673da71fe43f9ad33c04d0833ae2f'
+                        key: {
+                            application_file: '6327ecd751c44f50a858f3605e4805c9'
+                            source_artifact: '11250498e5364590bc7a42bea400890c'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '56bcb5df842446bba39ad789c36d01ac'
+                        key: {
+                            name: 'x_kpmg_ra_b1_konsulent'
                             element: 'NULL'
                             language: 'en'
                         }
                     },
                     {
                         table: 'sys_documentation'
-                        id: 'e61db148c5e544cbb48eb972030ffe4d'
+                        id: '5e35a9e0279c4e3aa09502833e23b03d'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'end_month'
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'prosent'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ux_lib_asset'
+                        id: '6327ecd751c44f50a858f3605e4805c9'
+                        key: {
+                            name: 'x_kpmg_ra_b1/main.js.map'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7410652c2cd143abb635855633520fce'
+                        key: {
+                            name: 'x_kpmg_ra_b1_kunde'
+                            element: 'bedriftsnavn'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_db_object'
+                        id: '78947ced7d3d4ae583b3c41dd1574f72'
+                        key: {
+                            name: 'x_kpmg_ra_b1_kunde'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7a20232939234d03a90e518e7fd30e7d'
+                        key: {
+                            name: 'x_kpmg_ra_b1_konsulent'
+                            element: 'tittel'
                             language: 'en'
                         }
                     },
                     {
                         table: 'sys_documentation'
-                        id: 'e89e01c405cc494a8395e1815ccead36'
+                        id: '82acd65c64bf402ca61e1913d8219302'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'start_date'
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'til_dato'
                             language: 'en'
                         }
                     },
                     {
-                        table: 'sys_ui_list_element'
-                        id: 'f0b15c90bf2f4d0ebfb1918424ebfd7f'
+                        table: 'sys_dictionary'
+                        id: '84a838d9da104e1fac195658712d99d8'
                         key: {
-                            list_id: {
-                                id: '3e27212122f84807a55063286b3c1255'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                    element: 'NULL'
-                                    relationship: 'NULL'
-                                    parent: 'NULL'
-                                }
-                            }
-                            element: 'end_date'
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'prosent'
+                        }
+                    },
+                    {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: '88a6336b9a3443aa870368555014236c'
+                        key: {
+                            application_file: '4bf070ea6f8a4e88a5633a64150c3f09'
+                            source_artifact: '11250498e5364590bc7a42bea400890c'
+                        }
+                    },
+                    {
+                        table: 'sys_db_object'
+                        id: '8e38286ed1ba4957b0de6d7b7a668169'
+                        key: {
+                            name: 'x_kpmg_ra_b1_allokering'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '8f4002e2a997433aadec25ec59d4cbe5'
+                        key: {
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'fra_dato'
+                            language: 'en'
                         }
                     },
                     {
                         table: 'sys_dictionary'
-                        id: 'f648b9d1a3cc41ae85a97947ee29b126'
+                        id: '95fb6092627c4dcca0b71579778e1464'
                         key: {
-                            name: 'x_2207143_k_test_assignment'
-                            element: 'active'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
-                        id: 'f8b9764af0854526b5f1c37e1df7438d'
-                        key: {
-                            name: 'x_2207143_k_test_assignment'
+                            name: 'x_kpmg_ra_b1_kunde'
                             element: 'NULL'
                         }
                     },
                     {
-                        table: 'sys_ui_element'
-                        id: 'fbaa72747bad4eb08bc7f23643628ede'
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: '99897d9d17f34009a3079e2f79c64b37'
                         key: {
-                            sys_ui_section: {
-                                id: '3d3767bdc5c347b9a0986fa085243de5'
-                                key: {
-                                    name: 'x_2207143_k_test_assignment'
-                                    caption: 'Assignment Details'
-                                    view: {
-                                        id: 'Default view'
-                                        key: {
-                                            name: 'NULL'
-                                        }
-                                    }
-                                    sys_domain: 'global'
-                                }
-                            }
-                            element: 'allocation_percentage'
-                            position: '7'
+                            application_file: '0a3454cb76f34c4bad308078d5e1636c'
+                            source_artifact: '11250498e5364590bc7a42bea400890c'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '9b717a6e46d84aad9e62257596982943'
+                        key: {
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'fra_dato'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a0d73581322645b0ab59bdfcee1e8e69'
+                        key: {
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'NULL'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'a57ef120ce404df990515b7a6b9e5bc4'
+                        key: {
+                            name: 'x_kpmg_ra_b1_konsulent'
+                            element: 'tittel'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'bc7991a8ac0a40a38a34616e640df68b'
+                        key: {
+                            name: 'x_kpmg_ra_b1_konsulent'
+                            element: 'aktiv'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'be96fbc4b0c640fd833550a1edca3a40'
+                        key: {
+                            name: 'x_kpmg_ra_b1_allokering'
+                            element: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: 'f4e74b17432e44a6a63124c74b13c623'
+                        key: {
+                            name: 'x_kpmg_ra_b1_konsulent'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'fea11f351e3147ccb1726987210b3dc9'
+                        key: {
+                            name: 'x_kpmg_ra_b1_kunde'
+                            element: 'bedriftsnavn'
                         }
                     },
                 ]

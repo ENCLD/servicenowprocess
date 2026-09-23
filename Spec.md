@@ -3,7 +3,7 @@
 > Fast kravspesifikasjon for arbeidsflyt-eksperimentet. **Samme versjon brukes i alle kjøringer.**
 > Endres den, bump versjonen og start målingene på nytt.
 
-**Versjon:** 1.0
+**Versjon:** 1.1 (1.0 → 1.1: brukergrensesnitt endret fra Service Portal til UI Page med `@servicenow/react-components`)
 **Basert på:** Einars Prompt 1, Test 2 (`prompting/README.md`)
 
 ---
@@ -16,7 +16,7 @@ En konsulentbedrift skal kunne se hvordan ansatte er fordelt på kundeoppdrag, h
 
 - Scoped app bygget med **ServiceNow SDK** (`now-sdk build` / `now-sdk install`)
 - Scope: `x_kpmg_ra_<variant><kjøring>` (f.eks. `x_kpmg_ra_b1`), **ny scope per kjøring**
-- Brukergrensesnitt: **Service Portal**
+- Brukergrensesnitt: **UI Page (React) med `@servicenow/react-components`**
 - Ingen hardkodede sys_id-er, og ingen GlideRecord i client scripts
 
 ## 3. Datamodell

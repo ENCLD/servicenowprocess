@@ -1,0 +1,276 @@
+:root {
+    --ra-flate: rgb(var(--now-container--color, 255, 255, 255));
+    --ra-kant: rgb(var(--now-container--border-color, 207, 213, 215));
+    --ra-tekst: rgb(var(--now-color_text--primary, 16, 23, 26));
+    --ra-tekst-dempet: rgb(var(--now-color_text--secondary, 75, 85, 89));
+    --ra-primaer: rgb(var(--now-actionable--primary--background-color, 0, 128, 163));
+    --ra-kritisk: rgb(var(--now-color_alert--critical-3, 200, 31, 36));
+    --ra-advarsel: rgb(var(--now-color_alert--warning-3, 214, 136, 0));
+    --ra-positiv: rgb(var(--now-color_alert--positive-3, 46, 132, 74));
+    --ra-fokus: rgb(var(--now-color_focus-ring, 53, 147, 37));
+    --ra-rom: var(--now-static-space--lg, 1rem);
+    --ra-rom-liten: var(--now-static-space--sm, 0.5rem);
+    --ra-radius: var(--now-container--border-radius, 8px);
+}
+
+body {
+    margin: 0;
+    font-family: var(--now-font-family, Lato, Arial, sans-serif);
+    color: var(--ra-tekst);
+    background: rgb(var(--now-color_background--primary, 245, 247, 249));
+}
+
+.ra-app {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ra-rom);
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: var(--ra-rom);
+}
+
+.ra-topp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--ra-rom);
+}
+
+.ra-knapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--ra-rom-liten);
+}
+
+.ra-stabel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ra-rom);
+}
+
+/* K7 */
+.ra-nokkeltall {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: var(--ra-rom);
+}
+
+.ra-nokkeltall__kort {
+    display: flex;
+    flex-direction: column;
+    padding: var(--ra-rom);
+}
+
+.ra-nokkeltall__verdi {
+    font-size: var(--now-static-font-size--xl, 1.5rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.ra-nokkeltall__tekst {
+    color: var(--ra-tekst-dempet);
+}
+
+/* Tabeller (K2, K8, K9) */
+.ra-tabell {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.ra-tabell th,
+.ra-tabell td {
+    text-align: left;
+    padding: var(--ra-rom-liten) var(--ra-rom);
+    border-top: 1px solid var(--ra-kant);
+}
+
+.ra-tabell th {
+    color: var(--ra-tekst-dempet);
+    font-weight: 600;
+}
+
+.ra-tall {
+    text-align: right !important;
+    font-variant-numeric: tabular-nums;
+}
+
+.ra-rad--over td,
+.ra-over {
+    color: var(--ra-kritisk);
+    font-weight: 600;
+}
+
+.ra-tom {
+    margin: 0;
+    padding: var(--ra-rom);
+    color: var(--ra-tekst-dempet);
+}
+
+.ra-to-kolonner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: var(--ra-rom);
+}
+
+/* K4 */
+.ra-diagram {
+    padding: 0 var(--ra-rom) var(--ra-rom);
+    overflow-x: auto;
+}
+
+.ra-diagram svg {
+    width: 100%;
+    min-width: 30rem;
+    height: auto;
+}
+
+.ra-diagram__soyle--under { fill: var(--ra-advarsel); }
+.ra-diagram__soyle--full { fill: var(--ra-primaer); }
+.ra-diagram__soyle--over { fill: var(--ra-kritisk); }
+
+.ra-diagram__verdi,
+.ra-diagram__navn,
+.ra-diagram__grensetekst {
+    fill: var(--ra-tekst);
+    font-size: 12px;
+}
+
+.ra-diagram__navn { fill: var(--ra-tekst-dempet); }
+
+.ra-diagram__grense {
+    stroke: var(--ra-kritisk);
+    stroke-width: 1.5;
+    stroke-dasharray: 6 4;
+}
+
+.ra-diagram__akse { stroke: var(--ra-kant); }
+
+/* K5 / K6 */
+.ra-tidslinje {
+    padding: 0 var(--ra-rom) var(--ra-rom);
+    overflow-x: auto;
+}
+
+.ra-tidslinje__gruppe {
+    border-top: 1px solid var(--ra-kant);
+    min-width: 50rem;
+}
+
+.ra-tidslinje__rad {
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    align-items: center;
+    min-width: 50rem;
+}
+
+.ra-tidslinje__rad--akse {
+    height: 1.75rem;
+}
+
+.ra-tidslinje__navn {
+    display: flex;
+    flex-direction: column;
+    padding: var(--ra-rom-liten) var(--ra-rom-liten) var(--ra-rom-liten) 0;
+}
+
+.ra-tidslinje__navn small {
+    color: var(--ra-tekst-dempet);
+}
+
+.ra-tidslinje__navn small.ra-over {
+    color: var(--ra-kritisk);
+}
+
+.ra-tidslinje__spor {
+    position: relative;
+    height: 100%;
+    min-height: 1.75rem;
+}
+
+.ra-tidslinje__maaned {
+    position: absolute;
+    top: 0.25rem;
+    padding-left: 0.25rem;
+    border-left: 1px solid var(--ra-kant);
+    color: var(--ra-tekst-dempet);
+    font-size: var(--now-static-font-size--sm, 0.75rem);
+    white-space: nowrap;
+}
+
+.ra-tidslinje__idag {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 2px solid var(--ra-primaer);
+    z-index: 1;
+}
+
+.ra-tidslinje__ingen {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.5rem;
+    color: var(--ra-tekst-dempet);
+    font-style: italic;
+}
+
+.ra-periode {
+    position: absolute;
+    height: 2rem;
+    margin: 0;
+    padding: 0 0.5rem;
+    overflow: hidden;
+    border: 1px solid var(--ra-primaer);
+    border-radius: var(--now-static-border-radius--md, 0.25rem);
+    background: rgba(var(--now-actionable--primary--background-color, 0, 128, 163), 0.15);
+    color: var(--ra-tekst);
+    font: inherit;
+    font-size: var(--now-static-font-size--sm, 0.75rem);
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.ra-periode:hover { background: rgba(var(--now-actionable--primary--background-color, 0, 128, 163), 0.3); }
+.ra-periode:focus-visible { outline: 2px solid var(--ra-fokus); outline-offset: 1px; }
+
+.ra-periode--over {
+    border-color: var(--ra-kritisk);
+    border-width: 2px;
+    background: rgba(var(--now-color_alert--critical-3, 200, 31, 36), 0.12);
+}
+
+.ra-periode--valgt {
+    box-shadow: inset 0 0 0 2px var(--ra-primaer);
+    font-weight: 700;
+}
+
+.ra-redigering,
+.ra-skjema {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ra-rom);
+}
+
+.ra-redigering {
+    margin: 0 0 var(--ra-rom) 13rem;
+    padding: var(--ra-rom);
+    border: 1px solid var(--ra-kant);
+    border-radius: var(--ra-radius);
+    background: var(--ra-flate);
+}
+
+.ra-felter {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: var(--ra-rom);
+}
+
+.ra-skjema-side {
+    width: 100%;
+    background: var(--ra-flate);
+    border-radius: var(--ra-radius);
+}
