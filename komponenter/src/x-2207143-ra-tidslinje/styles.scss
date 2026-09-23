@@ -1,0 +1,108 @@
+@import '../felles/stil';
+
+.ra-tl {
+	overflow-x: auto;
+
+	&__gruppe,
+	&__rad {
+		min-width: 48rem;
+	}
+
+	&__gruppe {
+		border-top: 1px solid var(--ra-kant);
+	}
+
+	&__rad {
+		display: grid;
+		grid-template-columns: 12rem 1fr;
+		align-items: center;
+
+		&--akse { height: 1.75rem; }
+	}
+
+	&__navn {
+		display: flex;
+		flex-direction: column;
+		padding: var(--ra-rom-liten) var(--ra-rom-liten) var(--ra-rom-liten) 0;
+	}
+
+	&__spor {
+		position: relative;
+		height: 100%;
+		min-height: 1.75rem;
+	}
+
+	&__maaned {
+		position: absolute;
+		top: 0.25rem;
+		padding-left: 0.25rem;
+		border-left: 1px solid var(--ra-kant);
+		color: var(--ra-dempet);
+		font-size: var(--now-static-font-size--sm, 0.75rem);
+		white-space: nowrap;
+	}
+
+	&__idag {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		border-left: 2px solid var(--ra-primaer);
+		z-index: 1;
+	}
+
+	&__ingen {
+		position: absolute;
+		top: 0.6rem;
+		left: 0.5rem;
+		color: var(--ra-dempet);
+		font-style: italic;
+	}
+}
+
+.ra-periode {
+	position: absolute;
+	height: 2rem;
+	margin: 0;
+	padding: 0 0.5rem;
+	overflow: hidden;
+	border: 1px solid var(--ra-primaer);
+	border-radius: var(--now-static-border-radius--md, 0.25rem);
+	background: rgba(var(--now-color--primary-1, 0, 128, 163), 0.15);
+	color: var(--ra-tekst);
+	font: inherit;
+	font-size: var(--now-static-font-size--sm, 0.75rem);
+	text-align: left;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	cursor: pointer;
+	z-index: 2;
+
+	&:hover { background: rgba(var(--now-color--primary-1, 0, 128, 163), 0.3); }
+	&:focus-visible { outline: 2px solid var(--ra-fokus); outline-offset: 1px; }
+
+	&--over {
+		border: 2px solid var(--ra-kritisk);
+		background: rgba(var(--now-color_alert--critical-3, 200, 31, 36), 0.12);
+	}
+
+	&--valgt {
+		box-shadow: inset 0 0 0 2px var(--ra-primaer);
+		font-weight: 700;
+	}
+}
+
+.ra-redigering {
+	margin: 0 0 var(--ra-rom) 12rem;
+	padding: var(--ra-rom);
+	border: 1px solid var(--ra-kant);
+	border-radius: var(--ra-radius);
+	background: var(--ra-flate);
+	display: flex;
+	flex-direction: column;
+	gap: var(--ra-rom-liten);
+}
+
+.ra-lenke {
+	align-self: center;
+	color: var(--ra-primaer);
+}

@@ -1,0 +1,31 @@
+@import '../felles/stil';
+
+.ra-diagram {
+	overflow-x: auto;
+
+	svg {
+		width: 100%;
+		min-width: 30rem;
+		height: auto;
+	}
+}
+
+.ra-soyle--under { fill: var(--ra-advarsel); }
+.ra-soyle--full { fill: var(--ra-primaer); }
+.ra-soyle--over { fill: var(--ra-kritisk); }
+
+.ra-etikett {
+	fill: var(--ra-tekst);
+	font-size: 12px;
+
+	&--navn { fill: var(--ra-dempet); }
+	&--grense { fill: var(--ra-kritisk); font-weight: 600; }
+}
+
+.ra-grense {
+	stroke: var(--ra-kritisk);
+	stroke-width: 1.5;
+	stroke-dasharray: 6 4;
+}
+
+.ra-akse { stroke: var(--ra-kant); }

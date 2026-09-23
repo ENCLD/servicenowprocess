@@ -1,0 +1,16 @@
+@import '../felles/stil';
+
+.ra-varsel {
+	padding: var(--ra-rom);
+	border: 2px solid var(--ra-kritisk);
+	border-left-width: 6px;
+	border-radius: var(--ra-radius);
+	background: var(--ra-flate);
+
+	.ra-tittel { color: var(--ra-kritisk); }
+
+	ul {
+		margin: 0 0 var(--ra-rom-liten);
+		padding-left: 1.25rem;
+	}
+}

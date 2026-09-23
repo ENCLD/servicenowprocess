@@ -1,0 +1,126 @@
+// Horizon-tokens med fallback, slik at komponentene følger instansens tema (også mørkt)
+:host {
+	--ra-flate: rgb(var(--now-color_background--primary, 255, 255, 255));
+	--ra-kant: rgb(var(--now-color_border--tertiary, 207, 213, 215));
+	--ra-tekst: rgb(var(--now-color_text--primary, 16, 23, 26));
+	--ra-dempet: rgb(var(--now-color_text--secondary, 75, 85, 89));
+	--ra-primaer: rgb(var(--now-color--primary-1, 0, 128, 163));
+	--ra-kritisk: rgb(var(--now-color_alert--critical-3, 200, 31, 36));
+	--ra-advarsel: rgb(var(--now-color_alert--warning-3, 214, 136, 0));
+	--ra-positiv: rgb(var(--now-color_alert--positive-3, 46, 132, 74));
+	--ra-fokus: rgb(var(--now-color_focus-ring, 53, 147, 37));
+	--ra-rom: var(--now-static-space--lg, 1rem);
+	--ra-rom-liten: var(--now-static-space--sm, 0.5rem);
+	--ra-radius: var(--now-static-border-radius--lg, 0.5rem);
+
+	display: block;
+	font-family: var(--now-font-family, Lato, Arial, sans-serif);
+	color: var(--ra-tekst);
+}
+
+.ra-kort {
+	padding: var(--ra-rom);
+	border: 1px solid var(--ra-kant);
+	border-radius: var(--ra-radius);
+	background: var(--ra-flate);
+}
+
+.ra-tittel {
+	margin: 0 0 var(--ra-rom-liten);
+	font-size: var(--now-static-font-size--lg, 1.25rem);
+	font-weight: 600;
+}
+
+.ra-dempet {
+	margin: 0;
+	color: var(--ra-dempet);
+}
+
+.ra-feil {
+	margin: 0;
+	color: var(--ra-kritisk);
+	font-weight: 600;
+}
+
+.ra-tabell {
+	width: 100%;
+	border-collapse: collapse;
+
+	th,
+	td {
+		padding: var(--ra-rom-liten);
+		border-top: 1px solid var(--ra-kant);
+		text-align: left;
+	}
+
+	th {
+		color: var(--ra-dempet);
+		font-weight: 600;
+	}
+
+	.ra-tall {
+		text-align: right;
+		font-variant-numeric: tabular-nums;
+	}
+}
+
+.ra-over {
+	color: var(--ra-kritisk);
+	font-weight: 600;
+}
+
+.ra-knapp {
+	padding: var(--ra-rom-liten) var(--ra-rom);
+	border: 1px solid var(--ra-primaer);
+	border-radius: var(--now-static-border-radius--md, 0.25rem);
+	background: var(--ra-flate);
+	color: var(--ra-primaer);
+	font: inherit;
+	cursor: pointer;
+
+	&--primaer {
+		background: var(--ra-primaer);
+		color: rgb(var(--now-color_text--tertiary, 255, 255, 255));
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--ra-fokus);
+		outline-offset: 2px;
+	}
+}
+
+.ra-felter {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	gap: var(--ra-rom);
+
+	label {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		font-weight: 600;
+	}
+
+	input,
+	select {
+		padding: var(--ra-rom-liten);
+		border: 1px solid var(--ra-kant);
+		border-radius: var(--now-static-border-radius--md, 0.25rem);
+		background: var(--ra-flate);
+		color: var(--ra-tekst);
+		font: inherit;
+		font-weight: 400;
+	}
+}
+
+.ra-knapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--ra-rom-liten);
+	margin-top: var(--ra-rom);
+}

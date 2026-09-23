@@ -1,0 +1,23 @@
+@import '../felles/stil';
+
+.ra-nokkeltall {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+	gap: var(--ra-rom);
+
+	&__kort {
+		display: flex;
+		flex-direction: column;
+		border-left-width: 4px;
+
+		&--info { border-left-color: var(--ra-primaer); }
+		&--positiv { border-left-color: var(--ra-positiv); }
+		&--advarsel { border-left-color: var(--ra-advarsel); }
+	}
+
+	&__verdi {
+		font-size: var(--now-static-font-size--xl, 1.5rem);
+		font-weight: 700;
+		font-variant-numeric: tabular-nums;
+	}
+}

@@ -1,0 +1,3 @@
+#!/bin/sh
+# Erstatning for ServiceNow CLI (snc): now-cli leser bare versjonen herfra
+echo "{\"snc\":\"1.2.0\"}"

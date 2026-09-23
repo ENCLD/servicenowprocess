@@ -1,0 +1,26 @@
+{
+  "name": "ra-komponenter",
+  "version": "0.0.1",
+  "private": false,
+  "description": "Ressursallokering: UI Builder-komponenter (SPEC 1.2)",
+  "keywords": [
+    "ServiceNow",
+    "Next Experience UI Component",
+    "ra-komponenter"
+  ],
+  "readme": "./README.md",
+  "engines": {
+    "node": ">=22"
+  },
+  "module": "src/index.js",
+  "dependencies": {
+    "@servicenow/sass-kit": "latest",
+    "@servicenow/ui-core": "24.1.1",
+    "@servicenow/ui-effect-http": "^24.1.1",
+    "@servicenow/ui-renderer-snabbdom": "24.1.1"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.25.7",
+    "sass": "1.53.0"
+  }
+}

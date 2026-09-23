@@ -160,6 +160,7 @@ declare global {
                     'modul-oversikt': {
                         table: 'sys_app_module'
                         id: '94e879e3145f40f68d294d8701e6c378'
+                        deleted: true
                     }
                     'modul-skille-data': {
                         table: 'sys_app_module'
@@ -194,6 +195,7 @@ declare global {
                     {
                         table: 'sys_ux_lib_asset'
                         id: '0a3454cb76f34c4bad308078d5e1636c'
+                        deleted: true
                         key: {
                             name: 'x_2207143_ra_b1/main'
                         }
@@ -218,6 +220,7 @@ declare global {
                     {
                         table: 'sn_glider_source_artifact'
                         id: '11250498e5364590bc7a42bea400890c'
+                        deleted: true
                         key: {
                             name: 'x_2207143_ra_b1_ressurs.do - BYOUI Files'
                         }
@@ -314,6 +317,7 @@ declare global {
                     {
                         table: 'sys_ui_page'
                         id: '4bf070ea6f8a4e88a5633a64150c3f09'
+                        deleted: true
                         key: {
                             endpoint: 'x_2207143_ra_b1_ressurs.do'
                         }
@@ -321,6 +325,7 @@ declare global {
                     {
                         table: 'sn_glider_source_artifact_m2m'
                         id: '514673da71fe43f9ad33c04d0833ae2f'
+                        deleted: true
                         key: {
                             application_file: '6327ecd751c44f50a858f3605e4805c9'
                             source_artifact: '11250498e5364590bc7a42bea400890c'
@@ -347,6 +352,7 @@ declare global {
                     {
                         table: 'sys_ux_lib_asset'
                         id: '6327ecd751c44f50a858f3605e4805c9'
+                        deleted: true
                         key: {
                             name: 'x_2207143_ra_b1/main.js.map'
                         }
@@ -396,6 +402,7 @@ declare global {
                     {
                         table: 'sn_glider_source_artifact_m2m'
                         id: '88a6336b9a3443aa870368555014236c'
+                        deleted: true
                         key: {
                             application_file: '4bf070ea6f8a4e88a5633a64150c3f09'
                             source_artifact: '11250498e5364590bc7a42bea400890c'
@@ -428,6 +435,7 @@ declare global {
                     {
                         table: 'sn_glider_source_artifact_m2m'
                         id: '99897d9d17f34009a3079e2f79c64b37'
+                        deleted: true
                         key: {
                             application_file: '0a3454cb76f34c4bad308078d5e1636c'
                             source_artifact: '11250498e5364590bc7a42bea400890c'

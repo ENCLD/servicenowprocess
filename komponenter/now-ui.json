@@ -1,0 +1,124 @@
+{
+  "components": {
+    "x-2207143-ra-tidslinje": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": [
+          "global.core",
+          "global.landing-page"
+        ],
+        "label": "Ressurs – Tidslinje",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "K5/K6: én rad per konsulent med allokeringene langs en tidsakse. Klikk en periode for å endre fra-dato, til-dato og prosent.",
+        "category": "primitives"
+      },
+      "actions": [
+        {
+          "name": "RA_ALLOKERING_LAGRET",
+          "label": "Allokering lagret",
+          "description": "Sendes etter at en allokering er lagret. De andre Ressurs-komponentene på siden oppdaterer seg automatisk.",
+          "payload": [
+            {
+              "name": "sysId",
+              "label": "Sys ID for allokeringen",
+              "fieldType": "string"
+            }
+          ]
+        }
+      ]
+    },
+    "x-2207143-ra-ny-allokering": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": [
+          "global.core",
+          "global.landing-page"
+        ],
+        "label": "Ressurs – Ny allokering",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "K1: registrer en allokering (konsulent, kunde, fra-dato, til-dato, prosent) med validering.",
+        "category": "primitives"
+      },
+      "actions": [
+        {
+          "name": "RA_ALLOKERING_LAGRET",
+          "label": "Allokering lagret",
+          "description": "Sendes etter at en allokering er lagret. De andre Ressurs-komponentene på siden oppdaterer seg automatisk.",
+          "payload": [
+            {
+              "name": "sysId",
+              "label": "Sys ID for allokeringen",
+              "fieldType": "string"
+            }
+          ]
+        }
+      ]
+    },
+    "x-2207143-ra-nokkeltall": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": [
+          "global.core",
+          "global.landing-page"
+        ],
+        "label": "Ressurs – Nøkkeltall",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "K7: aktive kontrakter, allokerte plasser og kontrakter som slutter innen 30 dager.",
+        "category": "primitives"
+      }
+    },
+    "x-2207143-ra-slutter-snart": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": [
+          "global.core",
+          "global.landing-page"
+        ],
+        "label": "Ressurs – Slutter snart",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "K8: oppdrag som slutter innen 30 dager, sortert etter nærmeste dato.",
+        "category": "primitives"
+      }
+    },
+    "x-2207143-ra-soylediagram": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": [
+          "global.core",
+          "global.landing-page"
+        ],
+        "label": "Ressurs – Søylediagram",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "K4: total allokering (%) per konsulent i dag, med 100 %-linje.",
+        "category": "primitives"
+      }
+    },
+    "x-2207143-ra-fordeling": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": [
+          "global.core",
+          "global.landing-page"
+        ],
+        "label": "Ressurs – Fordeling og kapasitet",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "K2/K9: total fordeling per konsulent i dag og hvem som trenger oppdrag.",
+        "category": "primitives"
+      }
+    },
+    "x-2207143-ra-overallokering": {
+      "innerComponents": [],
+      "uiBuilder": {
+        "associatedTypes": [
+          "global.core",
+          "global.landing-page"
+        ],
+        "label": "Ressurs – Overallokering",
+        "tileIcon": "./tile-icon/generic-tile-icon.svg",
+        "description": "K3: advarsel når en konsulent er over 100 % i en overlappende periode.",
+        "category": "primitives"
+      }
+    }
+  },
+  "scopeName": "x_2207143_ra_b1k"
+}
