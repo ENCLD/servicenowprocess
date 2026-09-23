@@ -5,14 +5,14 @@
 | **Variant** | B – Plan → bygg |
 | **Kjøring** | 1 |
 | **SPEC-versjon** | 1.1 (UI Page med `@servicenow/react-components` i stedet for Service Portal) |
-| **Scope** | `x_kpmg_ra_b1` |
+| **Scope** | `x_2207143_ra_b1` (SPEC: `x_kpmg_ra_b1`, se Avvik) |
 | **Branch** | `wf-b-run1` |
 | **Dato** | 2026-09-23 |
 
 ## Definition of Done
 
 - [x] `now-sdk build` kjører uten feil
-- [ ] `now-sdk install` kjører uten feil på PDI
+- [x] `now-sdk install` kjører uten feil på PDI (dev440578, 2026-09-23)
 - [ ] K1–K10 er verifisert manuelt på PDI og krysset av nedenfor
 - [x] Kodekvalitet (SPEC seksjon 2): ingen hardkodede sys_id-er i kilden, ingen GlideRecord/GlideAjax/g_form i klientkoden
 - [x] Kjøringen er committet på egen branch: `wf-b-run1`
@@ -21,7 +21,7 @@ Beregningsreglene (`src/server/regler.ts`, `src/server/oversikt-modell.ts`) er i
 
 ## Slik åpner du appen
 
-Navigator → **Ressursallokering → Oversikt**, eller `https://<instans>/x_kpmg_ra_b1_ressurs.do`.
+Navigator → **Ressursallokering → Oversikt**, eller `https://<instans>/x_2207143_ra_b1_ressurs.do`.
 Krever rollen `itil` (admin har den automatisk).
 
 ## Manuell verifisering på PDI
@@ -55,4 +55,4 @@ Forventede verdier gjelder dagens dato 2026-09-23. Testdataene har faste datoer,
 - **K8 og K9 som enkle tabeller:** `NowRecordListConnected` kan ikke filtreres, og listene er beregnede verdier. Derfor bruker de enkle tabeller i stedet.
 - **Diagram og tidslinje:** Komponentbiblioteket har ingen diagram- eller tidslinjekomponent, så begge er tegnet med egen SVG/CSS.
 - **Testdata** installeres ved hver `now-sdk install` og overskriver endringer i de 28 testpostene.
-- **Scope-prefiks:** Hvis PDI-en avviser `x_kpmg_ra_b1` fordi prefikset ikke er PDI-ens eget, noter det her.
+- **Scope-prefiks:** SPEC ber om `x_kpmg_ra_b1`, men PDI-en avviste installasjonen («Unable to install application as application was null») fordi `x_kpmg` ikke er instansens leverandørprefiks. Kjøringen bruker derfor `x_2207143_ra_b1` (PDI-ens prefiks + `ra_b1`), som avtalt i planen.

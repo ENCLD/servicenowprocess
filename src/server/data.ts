@@ -8,7 +8,7 @@ export function iDag(): string {
 
 export function hentKonsulenter(): KonsulentInn[] {
     const liste: KonsulentInn[] = []
-    const gr = new GlideRecord('x_kpmg_ra_b1_konsulent')
+    const gr = new GlideRecord('x_2207143_ra_b1_konsulent')
     gr.query()
     while (gr.next()) {
         liste.push({
@@ -23,7 +23,7 @@ export function hentKonsulenter(): KonsulentInn[] {
 
 export function hentKunder(): KundeInn[] {
     const liste: KundeInn[] = []
-    const gr = new GlideRecord('x_kpmg_ra_b1_kunde')
+    const gr = new GlideRecord('x_2207143_ra_b1_kunde')
     gr.orderBy('bedriftsnavn')
     gr.query()
     while (gr.next()) {
@@ -34,7 +34,7 @@ export function hentKunder(): KundeInn[] {
 
 export function hentAllokeringer(konsulent?: string): AllokeringInn[] {
     const liste: AllokeringInn[] = []
-    const gr = new GlideRecord('x_kpmg_ra_b1_allokering')
+    const gr = new GlideRecord('x_2207143_ra_b1_allokering')
     if (konsulent) gr.addQuery('konsulent', konsulent)
     gr.orderBy('fra_dato')
     gr.query()

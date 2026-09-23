@@ -4,7 +4,7 @@ export type { Oversikt }
 export type KonsulentRad = Oversikt['konsulenter'][number]
 export type AllokeringRad = Oversikt['allokeringer'][number]
 
-export const TABELL_ALLOKERING = 'x_kpmg_ra_b1_allokering'
+export const TABELL_ALLOKERING = 'x_2207143_ra_b1_allokering'
 
 declare global {
     interface Window {
@@ -38,7 +38,7 @@ async function kall<T>(url: string, init: RequestInit = {}): Promise<T> {
     return kropp.result as T
 }
 
-export const hentOversikt = () => kall<Oversikt>('/api/x_kpmg_ra_b1/ra/oversikt')
+export const hentOversikt = () => kall<Oversikt>('/api/x_2207143_ra_b1/ra/oversikt')
 
 export const opprettAllokering = (felter: AllokeringFelter) =>
     kall(`/api/now/table/${TABELL_ALLOKERING}`, { method: 'POST', body: JSON.stringify(felter) })
