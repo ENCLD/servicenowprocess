@@ -1,5 +1,5 @@
 import { GlideRecord, GlideDateTime } from '@servicenow/glide'
-import type { AllokeringInn, KonsulentInn, KundeInn } from './oversikt-modell'
+import type { AllokeringInn, KonsulentInn, KundeInn } from './oversikt-modell.ts'
 
 // Dagens dato i brukerens tidssone, som 'YYYY-MM-DD'
 export function iDag(): string {

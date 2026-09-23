@@ -1,6 +1,6 @@
 import { gs } from '@servicenow/glide'
-import { byggOversikt } from './oversikt-modell'
-import { hentAllokeringer, hentKonsulenter, hentKunder, iDag } from './data'
+import { byggOversikt } from './oversikt-modell.ts'
+import { hentAllokeringer, hentKonsulenter, hentKunder, iDag } from './data.ts'
 
 // GET /api/x_2207143_ra_b1/ra/oversikt – all beregnet data UI-siden trenger
 export function hentOversikt(request: any, response: any) {

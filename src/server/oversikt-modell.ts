@@ -1,4 +1,4 @@
-import type { Allokering, Overallokering } from './regler'
+import type { Allokering, Overallokering } from './regler.ts'
 import {
     GRENSE,
     erAktiv,
@@ -6,7 +6,7 @@ import {
     sumPaaDag,
     finnOverallokeringer,
     lavesteSumNeste30,
-} from './regler'
+} from './regler.ts'
 
 export interface KonsulentInn {
     sys_id: string

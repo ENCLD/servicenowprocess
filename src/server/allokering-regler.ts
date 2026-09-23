@@ -1,6 +1,6 @@
 import { gs } from '@servicenow/glide'
-import { finnOverallokeringer, validerAllokering } from './regler'
-import { hentAllokeringer } from './data'
+import { finnOverallokeringer, validerAllokering } from './regler.ts'
+import { hentAllokeringer } from './data.ts'
 
 // K1 (before insert/update): prosent utenfor 1–100 og til-dato før fra-dato avvises.
 // Kjører på serveren, så regelen gjelder skjema, Table API og UI-siden likt.
