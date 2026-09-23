@@ -4,7 +4,7 @@
     data.placesAllocated = 0;
 
     var ACTIVE = 'active=true';
-    var ENDING_SOON = 'active=true^end_dateRELATIVEGE@day@ago@0^end_dateRELATIVELE@day@ahead@30';
+    var ENDING_SOON = 'active=true^end_dateBETWEENjavascript:gs.beginningOfToday()@javascript:gs.daysAgoEnd(-30)';
 
     // Contracts ending within the next 30 days
     var gaEnding = new GlideAggregate('x_2207143_k_test_assignment');

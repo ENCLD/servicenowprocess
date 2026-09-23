@@ -878,6 +878,10 @@ declare global {
                         id: '8d97018cd34e4ff4afde4fe3a3e96786'
                         deleted: true
                     }
+                    x_2207143_k_test_app_menu: {
+                        table: 'sys_app_application'
+                        id: '46b4f07fdd3441e19630c6133c318ede'
+                    }
                     x_2207143_k_test_chart_widget: {
                         table: 'sp_widget'
                         id: 'df781907decc4f79a0ad4a5426ca3522'
@@ -942,9 +946,57 @@ declare global {
                         table: 'sp_rectangle_menu_item'
                         id: 'e396de83d21e469eb6838ffb25917dd1'
                     }
+                    x_2207143_k_test_menu_item_timeline: {
+                        table: 'sp_rectangle_menu_item'
+                        id: '79c3ca02802f4a97b8d185525525547e'
+                    }
+                    x_2207143_k_test_module_active: {
+                        table: 'sys_app_module'
+                        id: '1d220da32e284b4f9f24133664966995'
+                    }
+                    x_2207143_k_test_module_all: {
+                        table: 'sys_app_module'
+                        id: '3dde5badc4464a5d9747533e5eb27baf'
+                    }
+                    x_2207143_k_test_module_ending_soon: {
+                        table: 'sys_app_module'
+                        id: '327672cb68ba4e5c86568fde04de94fa'
+                    }
+                    x_2207143_k_test_module_new: {
+                        table: 'sys_app_module'
+                        id: 'b7ac19fe6e714d748e89b88cb41382f2'
+                    }
+                    x_2207143_k_test_module_portal: {
+                        table: 'sys_app_module'
+                        id: '1d0715953d064890968c0f5534cf6119'
+                    }
+                    x_2207143_k_test_module_sep_assignments: {
+                        table: 'sys_app_module'
+                        id: '0c15c1adf07a4771a89f9031df3eb80c'
+                    }
+                    x_2207143_k_test_module_timeline: {
+                        table: 'sys_app_module'
+                        id: '0271dd1fe3de4db39f9e3b4cf2f043a7'
+                    }
                     x_2207143_k_test_portal: {
                         table: 'sp_portal'
                         id: '4c6660afc0d9440da2be85b2f04a6ec3'
+                    }
+                    x_2207143_k_test_timeline_col_1: {
+                        table: 'sp_column'
+                        id: 'c8d3bfcbf2a94354ba720e9a42852b43'
+                    }
+                    x_2207143_k_test_timeline_container_1: {
+                        table: 'sp_container'
+                        id: '76656291a28b409cb74a263e80a1479c'
+                    }
+                    x_2207143_k_test_timeline_instance_1: {
+                        table: 'sp_instance'
+                        id: '629c4edf5fe048f68156c996149f0cc1'
+                    }
+                    x_2207143_k_test_timeline_row_1: {
+                        table: 'sp_row'
+                        id: '23d61ee5ecf747afb3f62da74666d356'
                     }
                     x_2207143_k_test_timeline_widget: {
                         table: 'sp_widget'
@@ -1195,6 +1247,13 @@ declare global {
                             name: 'x_2207143_k_test_assignment_v3'
                             element: 'allocation_percentage'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sp_page'
+                        id: '25b481a0c1ac4778980a91fcd0186454'
+                        key: {
+                            id: 'x_2207143_k_test_timeline'
                         }
                     },
                     {

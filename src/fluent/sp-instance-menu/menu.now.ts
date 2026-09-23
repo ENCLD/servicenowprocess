@@ -1,6 +1,7 @@
 import '@servicenow/sdk/global'
 import { SPMenu } from '@servicenow/sdk/core'
 import { homePage } from '../sp-page/home/home.now'
+import { timelinePage } from '../sp-page/timeline/timeline.now'
 
 export const mainMenu = SPMenu({
     $id: Now.ID['x_2207143_k_test_menu'],
@@ -14,6 +15,15 @@ export const mainMenu = SPMenu({
             page: homePage,
             glyph: 'calendar',
             order: 100,
+            active: true,
+        },
+        {
+            $id: Now.ID['x_2207143_k_test_menu_item_timeline'],
+            type: 'page',
+            label: 'Timeline',
+            page: timelinePage,
+            glyph: 'clock-o',
+            order: 200,
             active: true,
         },
     ],
