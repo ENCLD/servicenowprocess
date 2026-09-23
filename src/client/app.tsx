@@ -6,10 +6,9 @@ import { Loader } from '@servicenow/react-components/Loader'
 import { Modal } from '@servicenow/react-components/Modal'
 import OversiktVisning from './views/OversiktVisning'
 import AlleAllokeringer from './views/AlleAllokeringer'
-import AllokeringSkjema from './views/AllokeringSkjema'
 import NyAllokering from './components/NyAllokering'
 import { useOversikt } from './hooks/useOversikt'
-import { Rute, ruteFraUrl, skrivRute } from './utils/navigering'
+import { Rute, apneVanligSkjema, ruteFraUrl, skrivRute } from './utils/navigering'
 
 export default function App() {
     const [rute, setRute] = useState<Rute>(ruteFraUrl)
@@ -45,15 +44,19 @@ export default function App() {
             setRute(ny)
             if (ny.visning === 'oversikt') last()
         })
-    const apneSkjema = (id: string) => gaaTil({ visning: 'allokering', id })
+    const apneSkjema = (id: string) =>
+        beskyttet(() => {
+            ulagret.current = false
+            apneVanligSkjema(id)
+        })
 
     return (
         <main className="ra-app">
             <header className="ra-topp">
                 <Heading label="Ressursallokering" level={1} variant="header-primary" hasNoMargin />
                 <nav className="ra-knapper" aria-label="Visninger">
-                    <Button label="Oversikt" variant={rute.visning === 'oversikt' ? 'primary' : 'secondary'} onClicked={() => gaaTil({ visning: 'oversikt', id: null })} />
-                    <Button label="Alle allokeringer" variant={rute.visning === 'allokeringer' ? 'primary' : 'secondary'} onClicked={() => gaaTil({ visning: 'allokeringer', id: null })} />
+                    <Button label="Oversikt" variant={rute.visning === 'oversikt' ? 'primary' : 'secondary'} onClicked={() => gaaTil({ visning: 'oversikt' })} />
+                    <Button label="Alle allokeringer" variant={rute.visning === 'allokeringer' ? 'primary' : 'secondary'} onClicked={() => gaaTil({ visning: 'allokeringer' })} />
                     <Button label="Ny allokering" icon="plus-outline" variant="secondary" disabled={!data} onClicked={() => beskyttet(() => setNyApen(true))} />
                 </nav>
             </header>
@@ -68,9 +71,6 @@ export default function App() {
                 ))}
             {rute.visning === 'allokeringer' && (
                 <AlleAllokeringer onApne={apneSkjema} onNy={() => apneSkjema('-1')} />
-            )}
-            {rute.visning === 'allokering' && rute.id && (
-                <AllokeringSkjema key={rute.id} sysId={rute.id} onUlagret={settUlagret} />
             )}
 
             {data && <NyAllokering data={data} apen={nyApen} onLukk={() => setNyApen(false)} onLagret={last} onUlagret={settUlagret} />}

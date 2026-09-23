@@ -51,7 +51,8 @@ Forventede verdier gjelder dagens dato 2026-09-23. Testdataene har faste datoer,
 ## Avvik og merknader
 
 - **SPEC 1.0 → 1.1:** Brukergrensesnittet er en React UI Page i stedet for Service Portal, etter beslutning før kjøringen.
-- **Egne felt i tidslinjen og i «Ny allokering»:** Standard postskjema (`RecordProvider`) gir ikke beskjed når lagringen er ferdig, og kan derfor ikke oppdatere K2/K4/K7 automatisk (K6). Derfor bruker disse egne felt og Table API. Standardskjemaet brukes ved «Åpne skjema» og fra «Alle allokeringer».
+- **Egne felt i tidslinjen og i «Ny allokering»:** Standard postskjema (`RecordProvider`) gir ikke beskjed når lagringen er ferdig, og kan derfor ikke oppdatere K2/K4/K7 automatisk (K6). Derfor bruker disse egne felt og Table API.
+- **Ikke React-postskjema:** Første installasjon ga en side som ble stående på «Laster …». Årsaken var at `RecordProvider`/`FormDataConnected` i `@servicenow/react-components` 0.1.8 krasjer allerede når modulen lastes på denne instansversjonen (`Cannot read properties of undefined (reading 'actionHandlers')` i `sn-scripting-environment`), og det stoppet hele siden. «Åpne skjema» og radklikk i «Alle allokeringer» åpner derfor det vanlige ServiceNow-skjemaet (`x_2207143_ra_b1_allokering.do`). Siden har også fått en feilgrense som viser feilmeldingen i stedet for en blank side.
 - **K8 og K9 som enkle tabeller:** `NowRecordListConnected` kan ikke filtreres, og listene er beregnede verdier. Derfor bruker de enkle tabeller i stedet.
 - **Diagram og tidslinje:** Komponentbiblioteket har ingen diagram- eller tidslinjekomponent, så begge er tegnet med egen SVG/CSS.
 - **Testdata** installeres ved hver `now-sdk install` og overskriver endringer i de 28 testpostene.

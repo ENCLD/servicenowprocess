@@ -1,29 +1,23 @@
-export type Visning = 'oversikt' | 'allokeringer' | 'allokering'
+import { TABELL_ALLOKERING } from '../services/api'
+
+export type Visning = 'oversikt' | 'allokeringer'
 
 export interface Rute {
     visning: Visning
-    id: string | null
 }
 
 export function ruteFraUrl(): Rute {
-    const params = new URLSearchParams(window.location.search)
-    const visning = params.get('view')
-    return {
-        visning: visning === 'allokeringer' || visning === 'allokering' ? visning : 'oversikt',
-        id: params.get('id'),
-    }
+    const visning = new URLSearchParams(window.location.search).get('view')
+    return { visning: visning === 'allokeringer' ? 'allokeringer' : 'oversikt' }
 }
 
 const TITLER: Record<Visning, string> = {
     oversikt: 'Ressursallokering',
     allokeringer: 'Alle allokeringer',
-    allokering: 'Allokering',
 }
 
 export function skrivRute(rute: Rute) {
-    const params = new URLSearchParams({ view: rute.visning })
-    if (rute.id) params.set('id', rute.id)
-    const sti = `${window.location.pathname}?${params}`
+    const sti = `${window.location.pathname}?${new URLSearchParams({ view: rute.visning })}`
     const tittel = TITLER[rute.visning]
     // Inne i Polaris-rammen oppdateres adressefeltet via toppvinduet
     if (window.self !== window.top) {
@@ -31,4 +25,11 @@ export function skrivRute(rute: Rute) {
     }
     window.history.pushState(rute, '', sti)
     document.title = tittel
+}
+
+// Det vanlige postskjemaet. React-postskjemaet (RecordProvider) i
+// @servicenow/react-components 0.1.8 krasjer når modulen lastes på denne
+// instansversjonen, så vi bruker standardskjemaet i stedet. '-1' gir ny post.
+export function apneVanligSkjema(sysId: string) {
+    window.location.assign(`/${TABELL_ALLOKERING}.do?sys_id=${encodeURIComponent(sysId)}`)
 }

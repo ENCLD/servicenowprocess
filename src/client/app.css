@@ -274,3 +274,16 @@ body {
     background: var(--ra-flate);
     border-radius: var(--ra-radius);
 }
+
+.ra-feilgrense {
+    margin: var(--ra-rom);
+    padding: var(--ra-rom);
+    border: 2px solid var(--ra-kritisk);
+    border-radius: var(--ra-radius);
+    background: var(--ra-flate);
+}
+
+.ra-feilgrense pre {
+    white-space: pre-wrap;
+    font-size: var(--now-static-font-size--sm, 0.75rem);
+}
